@@ -1,0 +1,19 @@
+<textarea id="textarea" placeholder="selam"></textarea>
+
+
+
+
+
+<script>
+
+
+    textarea.addEventListener('input', function () {
+
+        let text = textarea.value;
+        convertedText = text.replace(/hy/g, 'hello');
+        convertedText = text.replace(/selam/g, 'ሰልም');
+        convertedText = text.replace(/s/g, 'ስ');
+        convertedText = text.replace(/a/g, 'አ');
+        textarea.value = convertedText;
+    });
+</script>
