@@ -52,28 +52,22 @@ function displayHistory() {
         li.textContent = item;
         history.appendChild(li);
 
-        document.querySelector(".conversion").style.flex = "0";
-        document.querySelector(".history-container").style.width = "700px";
+        document.querySelector(".conversion").style.display = "none";
+        document.querySelector(".history-container").style.display = "block";
+
     });
 }
 function hideHistory() {
-    document.querySelector(".conversion").style.flex = "1";
-    document.querySelector(".history-container").style.width = "0";
+    document.querySelector(".conversion").style.display = "flex";
+    document.querySelector(".history-container").style.display = "none";
 }
 function clearLocaldatas() {
     localStorage.removeItem("histry");
-    window.location.reload();
+    window.location.reload(); s
 }
 
-let historyItoms = document.querySelectorAll(".history-item");
 
-console.table(historyItoms);
 
-historyItoms.forEach(historyItom => {
-    historyItom.addEventListener("DOMContentLoaded", function () {
-        alert("hello");
-    });
-});
 
 
 var car;
@@ -615,9 +609,8 @@ function transcrire() {
 
 }
 
-// after document loaded focus on textarea
 window.onload = function () {
-    // document.conversion.saisie.focus();
+    document.conversion.saisie.focus();
 }
 
 

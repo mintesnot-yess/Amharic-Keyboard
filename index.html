@@ -38,7 +38,7 @@
             <button title="ታሪክ" type="button" onclick="displayHistory()">
                 <i class="fa fa-clock" aria-hidden="true"></i>
             </button>
-            <a title="ሰለ እኔ" href="https://github.com/mintesnot-yess">
+            <a class="info" rel="noopener" title="ሰለ እኔ" target="_blank" href="https://github.com/mintesnot-yess">
 
                 <i class="fa fa-info" aria-hidden="true"></i>
             </a>
@@ -47,20 +47,19 @@
     </form>
 
     <div class="history-container">
-        <li onclick="hideHistory()" class="back" title="back"> <i class="fa fa-angle-left">
+        <button onclick="hideHistory()" class="back" title="ተመለስ"> <i class="fa fa-angle-left">
             </i>
-        </li>
+        </button>
 
         <ul id="history">
 
         </ul>
 
-        <li onclick="clearLocaldatas()" class="clea-all" title="claer all"><i class="fa fa-trash">
+        <button onclick="clearLocaldatas()" class="clea-all" title="ሁሉንም አጥፋ"><i class="fa fa-trash">
             </i>
-        </li>
+        </button>
 
     </div>
-    <div id="tableBody"></div>
 
 
     <script src="assets/js/script.js">
