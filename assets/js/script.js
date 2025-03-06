@@ -1,5 +1,5 @@
 
-let myArray = JSON.parse(localStorage.getItem("histry")) || [];
+let myArray = JSON.parse(localStorage.getItem("history")) || [];
 
 async function pasteTexts() {
     try {
@@ -39,7 +39,7 @@ function clearTexts() {
 function addToHistory(text) {
     myArray.push(text);
     let myArrayString = JSON.stringify(myArray);
-    localStorage.setItem("histry", myArrayString);
+    localStorage.setItem("history", myArrayString);
 }
 
 function displayHistory() {
@@ -61,24 +61,25 @@ function hideHistory() {
     document.querySelector(".conversion").style.display = "flex";
     document.querySelector(".history-container").style.display = "none";
 }
-function clearLocaldatas() {
-    localStorage.removeItem("histry");
+function clearLocalData() {
+    localStorage.removeItem("history");
     window.location.reload(); s
 }
 
 function redirectToTranslate() {
-       
-                const inputText = document.getElementById("bar").value;
-                const sourceLang = 'am';
-                const targetLang = 'en';
- 
-                // Encode the text for URL
-                const encodedText = encodeURIComponent(inputText);
-                // Construct the Google Translate URL
-                const googleTranslateUrl = `https://translate.google.com/?sl=${sourceLang}&tl=${targetLang}&text=${encodedText}&op=translate`;
-                // Redirect to Google Translate
-                window.open(googleTranslateUrl, '_blank');
-        }
+
+    const inputText = document.getElementById("bar").value;
+    const sourceLang = 'am';
+    const targetLang = 'en';
+    if (inputText != '' && inputText != null) {
+        // Encode the text for URL
+        const encodedText = encodeURIComponent(inputText);
+        // Construct the Google Translate URL
+        const googleTranslateUrl = `https://translate.google.com/?sl=${sourceLang}&tl=${targetLang}&text=${encodedText}&op=translate`;
+        // Redirect to Google Translate
+        window.open(googleTranslateUrl, '_blank');
+    }
+}
 
 
 

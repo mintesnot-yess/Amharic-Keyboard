@@ -2,29 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta property="og:image" content="assets/img/wbsc.jpg">
-    <title>የግዕዝ ፊደላት ኪይቦርድ | የቁልፍ ሰሌዳ • Online Amhari Keyboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon -->
+    <meta name="description"
+        content="ኦንላይን የግዕዝ ፊደላት ኪቦርድ እና ትርጉም || Online keyboard to type Amharic text with the Geez alphabet (Ethiopian language)">
+    <meta name="keywords"
+        content="amharic, ethiopian, geez, keyboard, ethiopia, amharic keyboard online, geez keyboard online">
+    <meta name="author" content="Mintesnot Yesmashewa">
+    <meta property="og:title" content="Online Amharic Keyboard - የግዕዝ ፊደላት ኪቦርድ">
+    <meta property="og:description"
+        content="Use this online tool to type Amharic text with the Geez alphabet. Perfect for Ethiopians and those learning the language.">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>የግዕዝ ፊደላት ኪይቦርድ | የቁልፍ ሰሌዳ • Online Amharic Keyboard</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
-    <meta name="description"
-        content="ኦንላይን የግዕዝ ፊደላት ኪቦርድ (የኢትዮጵያ ቋንቋ) || Online keyboard to type en Amharic text with the Geez alphabet (Ethiopian language) ">
-    <!--  translate to amharic this description -->
-    <meta name="Keywords"
-        content="amharic,ethiopian,geez,keyboard,ethiopia,amharic keyboard online,geez keyboard online">
+    <!-- External Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-
 <body>
     <form name="conversion" class="conversion">
-        <textarea onblur="bluerd(this.value)" spellcheck=" false" name="saisie" id="bar" value="" onkeyup="transcrire()"
+        <textarea onblur="bluerd(this.value)" spellcheck="false" name="saisie" id="bar" value="" onkeyup="transcrire()"
             class="cadr" placeholder="እዚህ ጻፍ"></textarea>
         <span>
             <button title="ገልብጥ" type="button" onclick="copyTexts()">
@@ -34,21 +41,19 @@
                 <i class="fa fa-paste" aria-hidden="true"></i>
             </button>
 
-             <button title="ሁሉንም አጥፋ" type="button" onclick="clearTexts()">
+            <button title="ሁሉንም አጥፋ" type="button" onclick="clearTexts()">
                 <i class="fa fa-times" aria-hidden="true"></i>
             </button>
-            
+
             <button title="ተርጉም" type="button" onclick="redirectToTranslate()">
-<i class="fa fa-language" aria-hidden="true"></i>
+                <i class="fa fa-language" aria-hidden="true"></i>
             </button>
             <button title="ታሪክ" type="button" onclick="displayHistory()">
                 <i class="fa fa-clock" aria-hidden="true"></i>
             </button>
             <a class="info" rel="noopener" title="ሰለ እኔ" target="_blank" href="https://github.com/mintesnot-yess">
-
                 <i class="fa fa-info" aria-hidden="true"></i>
             </a>
-
         </span>
     </form>
 
@@ -61,16 +66,14 @@
 
         </ul>
 
-        <button onclick="clearLocaldatas()" class="clea-all" title="ሁሉንም አጥፋ"><i class="fa fa-trash">
+        <button onclick="clearLocalData()" class="clea-all" title="ሁሉንም አጥፋ"><i class="fa fa-trash">
             </i>
         </button>
 
     </div>
 
-
-    <script src="assets/js/script.js">
-    </script>
-
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
 
 </body>
 
