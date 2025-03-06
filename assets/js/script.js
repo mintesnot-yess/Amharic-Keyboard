@@ -66,7 +66,28 @@ function clearLocaldatas() {
     window.location.reload(); s
 }
 
+   function redirectToTranslate() {
+            const inputText = document.getElementById("bar").value;
+            const sourceLang = 'am';
+            const targetLang = 'en';
+            const errorMessage = document.getElementById("errorMessage");
 
+            // Validate input text
+            if (!inputText.trim()) {
+                errorMessage.style.display = "block";
+                errorMessage.innerHTML = "Please enter text to translate.";
+                return;
+            } else {
+                errorMessage.style.display = "none";
+            }
+            // Encode the text for URL
+            const encodedText = encodeURIComponent(inputText);
+            // Construct the Google Translate URL
+            const googleTranslateUrl = `https://translate.google.com/?sl=${sourceLang}&tl=${targetLang}&text=${encodedText}&op=translate`;
+
+            // Redirect to Google Translate
+            window.location.href = googleTranslateUrl;
+        }
 
 
 
